@@ -119,7 +119,7 @@ int main(void)
   	// ADC conversion End
   	HAL_ADC_Stop(&hadc1);
 
-  	uint16_t servoValue = map(result, 0, 4095, 600, 2400);
+  	uint16_t servoValue = map(result, 0, 4095, 600, 2200);
   	htim3.Instance->CCR1 = servoValue;
   	printf("%d\n", servoValue);
   	HAL_Delay(100);
